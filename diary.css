@@ -1,0 +1,102 @@
+html,body{
+	width:100%;
+	margin:0px auto;
+	overflow-x:hidden;
+}
+.navbar-left{
+	color:white;
+}
+#home{
+	background-image:url("diary2.jpg");
+	background-repeat: no-repeat;
+	background-position:center center;
+	background-size:cover;
+	width:100%;
+	margin:0px;
+	height:500px;
+	
+}
+a.visited{
+color:white;
+}
+#transparent{
+	background-color:rgba(7,74,102,0.6);
+	width:100%;
+	height:500px;
+	position:fixed;
+	left:0px;
+	top:0px;
+}
+#main{
+	margin-top:100px;
+	margin-left:2px;
+	
+}
+.navbar-default{
+	background:rgb(12,22,60);
+	width:100%;
+}
+#mynav{
+	margin-right: 20px;
+}
+.navbar-collapse > .navbar-right > li > a{
+	font-size:15px;
+	font-weight:bold;
+	color:rgb(171,150,150);
+}
+.navbar-collapse > .navbar-right > li > a:hover{
+	
+	color:white;
+}
+.navbar-collapse > .navbar-right > li >form> button{
+	border:2px solid white;	
+	height:40px;
+	border-radius:0px;
+	background:rgb(12,22,50);
+	margin-left:10px;
+	font-weight:bold;
+	margin-top:5px;
+	color:white;
+}
+.navbar-collapse > .navbar-right > li > button:hover{
+	background:rgb(11,49,138);
+}
+
+#image_preview{
+	width:205px;
+	height:205px;
+	border:2px solid teal;
+}
+#previewing{
+	width:200px;
+	height:200px;
+}
+#image_preview > input{
+	display:none;
+}
+#alt{
+	width:205px;
+	border:2px solid teal;
+	border-radius:0px;
+}
+#main>.col-md-6>.gap{
+	margin-top:40px;
+}
+#main>.col-md-6>.gap>form>#area,#area1,#area0,#area2{
+	border:1px solid #438D80;
+	padding:8px;
+}
+#main>.col-md-6>.gap>#text-control{
+	font-family: 'Oxygen', sans-serif;
+	color:rgb(38,55,51);
+	margin-top:10px;
+}
+#main>.col-md-6>.gap>form>button{
+	margin-top:20px;
+	border:2px solid rgb(8,34,87);	
+}
+#main>.col-md-6>.gap>form>button:hover{
+	border:2px solid rgb(11,14,61);
+	color:white;
+	background:rgb(8,34,87);
+}
