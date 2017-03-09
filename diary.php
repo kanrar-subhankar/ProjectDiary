@@ -11,7 +11,7 @@ if(isset($_SESSION['user'])){
 <title>
 DIARY
 </title>
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -26,6 +26,7 @@ DIARY
      <link href="https://fonts.googleapis.com/css?family=Baloo+Da|Cookie" rel="stylesheet"> 
      <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+  <script src="jquery-3.1.1.min.js"></script>
      <link rel="stylesheet" href="diary.css" type="text/css">
 </head>
 <body>
@@ -34,6 +35,7 @@ DIARY
 <nav class="nav navbar-default navbar-fixed-top" >
 <div class="container-fluid" id="cow">
 <div class="navbar-header">
+<h2 class="nav navbar-nav navbar-left">Heaven</h2>
 <button class="navbar-toggle" data-target="#mynav" data-toggle="collapse" type="button">
 <span class="sr-only">Toggle Navigation</span>
 <span class="icon-bar"></span>
@@ -41,7 +43,7 @@ DIARY
 <span class="icon-bar"></span>
 </button>
 </div>
-<h2 class="nav navbar-nav navbar-left">Heaven</h2>
+
     <!--<form class="navbar-form navbar-left">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Search" style="background:rgb(12,22,50);">
@@ -56,7 +58,25 @@ DIARY
 </ul>
 </div>
 </nav>
-
+<div class="middle">
+  <div class="transparent">
+    <div class="row">
+        <div class="col-md-9 col-md-offset-3">
+        <h1 id="mainId">you write your day we will make your diary</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-5" >
+             <p id="subId">Feel free to share</p>
+        </div>
+      </div>
+        <div class="row">
+             <div class="col-md-3 col-md-offset-6" >
+                   <div id="lineId"></div>
+              </div>
+        </div>
+  </div>
+</div>
 
 
 
@@ -139,9 +159,14 @@ DIARY
   </div>
 </div>
 <script type="text/javascript">
-$(window).load(function(){
+$(document).ready(function(){
+        $('#main').hide();
+        $('#mainId').show(2000);
+        $('#subId').show(2000);
+          $('#lineId').show(2000);
         $('#myModal').modal('show');
     });
+
 document.getElementById('alt').addEventListener('click',function(){
    document.getElementById('file').click();
 });
@@ -201,16 +226,14 @@ $("#complete").modal('show');
 
 
 function func(){
-  $("#head").hide(300);
+  $(".middle").hide(300);
   $('#main').load($(this).attr("href")).show();
 }
 function func2(){
-  $("#head").show(300);
+  $(".middle").show(300);
   $("#main").hide(300);
 }
-$('a').on('click mouseenter mouseout',function(){
-      $(this).addClass("visited");
-});
+
 </script>
 </body>
 </html>
